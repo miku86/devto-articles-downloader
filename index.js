@@ -37,15 +37,10 @@ const extractContent = ({ body_markdown }) => (body_markdown);
 
 const writeContentToFile = (fileName, content) => {
   fs.mkdir(OUT_DIR, { recursive: true }, (err) => {
-    if (err) {
-      throw err;
-    } else {
-      fs.writeFile(`${OUT_DIR}${fileName}`, content, (err) => {
-        if (err) {
-          throw new Error(err);
-        }
-      });
-    }
+    if (err) throw new Error(err);
+    fs.writeFile(`${OUT_DIR}${fileName}`, content, (err) => {
+      if (err) throw new Error(err);
+    });
   });
 };
 
