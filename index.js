@@ -8,6 +8,7 @@ const API_URL = 'https://dev.to/api';
 const PATH_ALL_ARTICLES = '/articles/me/all';
 const URL_ALL_ARTICLES = `${API_URL}${PATH_ALL_ARTICLES}`;
 const LENGTH_OF_TIMESTAMP = -14;
+const PREFIX_IF_NOT_PUBLISHED = '[not-published]';
 const OUT_DIR = 'OUTPUT/';
 
 const getAllArticles = async (url) => {
@@ -24,7 +25,9 @@ const getAllArticles = async (url) => {
 };
 
 const createFileName = ({ published_at, slug }) => {
-  const correctDate = published_at ? published_at.slice(0, LENGTH_OF_TIMESTAMP) : published_at;
+  const correctDate = published_at
+    ? published_at.slice(0, LENGTH_OF_TIMESTAMP)
+    : PREFIX_IF_NOT_PUBLISHED;
   const fileName = `${correctDate}-${slug}`;
   const fileExtension = '.md';
   return `${fileName}${fileExtension}`;
