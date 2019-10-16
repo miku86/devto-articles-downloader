@@ -1,4 +1,5 @@
-/* eslint camelcase: ["error", {allow: ["body_markdown", "published_at"]}] */
+/* eslint camelcase: ["error", { allow: ["body_markdown", "published_at"]}] */
+/* eslint no-shadow: ["error", { allow: ["err"] }] */
 const axios = require('axios').default;
 const fs = require('fs');
 require('dotenv').config();
