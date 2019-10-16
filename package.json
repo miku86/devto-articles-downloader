@@ -1,0 +1,14 @@
+{
+  "name": "devto-articles-downloader",
+  "version": "1.0.0",
+  "description": "a tool to download all your dev.to articles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dev.to"
+  ],
+  "author": "miku86",
+  "license": "ISC"
+}
