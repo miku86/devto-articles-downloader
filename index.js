@@ -26,10 +26,13 @@ const createFileName = ({ published_at, slug }) => {
   return `${fileName}${fileExtension}`;
 };
 
+const extractContent = ({ body_markdown }) => (body_markdown);
+
 const articlesDownloader = async () => {
   const rawArticles = await getAllArticles(URL_ALL_ARTICLES);
   rawArticles.forEach((article) => {
     const fileName = createFileName(article);
+    const content = extractContent(article);
   });
 };
 
