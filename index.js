@@ -18,7 +18,7 @@ const getAllArticles = async (url) => {
         'api-key': process.env.API_TOKEN,
       },
     });
-    return await data.slice(0, 5);
+    return await data;
   } catch (err) {
     throw new Error(err);
   }
