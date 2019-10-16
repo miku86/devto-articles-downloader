@@ -10,5 +10,8 @@
     "dev.to"
   ],
   "author": "miku86",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
